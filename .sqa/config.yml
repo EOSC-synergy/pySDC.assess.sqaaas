@@ -1,0 +1,72 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: release/1.7.8
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/Parallel-in-Time/pySDC:
+      branch: master
+      repo: https://github.com/Parallel-in-Time/pySDC
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/Parallel-in-Time/pySDC git:
+        commands:
+        - /usr/bin/env sh .sqa/script.nerdy-brown-badger.sh
+        container: qc.acc_sickly-lilac-hare
+  QC.Doc:
+    repos:
+      github.com/Parallel-in-Time/pySDC find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.chummy-sangria-birman.sh
+        container: qc.doc_shaggy-teal-russel
+      github.com/Parallel-in-Time/pySDC git:
+        commands:
+        - /usr/bin/env sh .sqa/script.cloudy-bronze-salamander.sh
+        container: qc.doc_clammy-red-dachsbracke
+      github.com/Parallel-in-Time/pySDC markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.pasty-beige-buffalo.sh
+        container: qc.doc_cozy-grey-coral
+      github.com/Parallel-in-Time/pySDC restructuredtext-lint:
+        commands:
+        - /usr/bin/env sh .sqa/script.snippy-taupe-gerbil.sh
+        container: qc.doc_lovely-seashell-bracke
+  QC.Lic:
+    repos:
+      github.com/Parallel-in-Time/pySDC licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.grumpy-ruby-angora.sh
+        container: qc.lic_freaky-scarlet-anteater
+  QC.Met:
+    repos:
+      github.com/Parallel-in-Time/pySDC cff-converter-python:
+        commands:
+        - /usr/bin/env sh .sqa/script.silly-cornflower-cuttlefish.sh
+        container: qc.met_lanky-lemon-raccoon
+  QC.Sec:
+    repos:
+      github.com/Parallel-in-Time/pySDC bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.squirrely-ruby-woodlouse.sh
+        container: qc.sec_homely-malachite-manatee
+  QC.Sty:
+    repos:
+      github.com/Parallel-in-Time/pySDC flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.zippy-cobalt-dachsbracke.sh
+        container: qc.sty_hazy-charcoal-bonobo
+      github.com/Parallel-in-Time/pySDC jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.scaly-peach-chow.sh
+        container: qc.sty_homely-flax-cuscus
+  QC.Ver:
+    repos:
+      github.com/Parallel-in-Time/pySDC get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.gummy-bronze-turkey.sh
+        container: qc.ver_scanty-ecru-snail
+timeout: 5400
