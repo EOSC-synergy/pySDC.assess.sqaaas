@@ -15,58 +15,58 @@ sqa_criteria:
     repos:
       github.com/Parallel-in-Time/pySDC git:
         commands:
-        - /usr/bin/env sh .sqa/script.shabby-viridian-nightingale.sh
-        container: qc.acc_blurry-rose-nightingale
+        - /usr/bin/env sh .sqa/script.skinny-cerise-avocet.sh
+        container: qc.acc_bluesy-teal-bison
   QC.Doc:
     repos:
       github.com/Parallel-in-Time/pySDC find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.smelly-aqua-sponge.sh
-        container: qc.doc_crabby-turquoise-labradoodle
+        - /usr/bin/env sh .sqa/script.wheezy-peach-mastiff.sh
+        container: qc.doc_silly-olivine-ant
       github.com/Parallel-in-Time/pySDC git:
         commands:
-        - /usr/bin/env sh .sqa/script.greasy-black-crane.sh
-        container: qc.doc_cozy-tangerine-peccary
+        - /usr/bin/env sh .sqa/script.skinny-indigo-crab.sh
+        container: qc.doc_squirrely-plum-bear
       github.com/Parallel-in-Time/pySDC markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.freaky-fuchsia-spitz.sh
-        container: qc.doc_shabby-magnolia-wrasse
+        - /usr/bin/env sh .sqa/script.beady-red-snail.sh
+        container: qc.doc_jumpy-harlequin-earwig
       github.com/Parallel-in-Time/pySDC restructuredtext-lint:
         commands:
-        - /usr/bin/env sh .sqa/script.paltry-cyan-wombat.sh
-        container: qc.doc_smelly-cyan-heron
+        - /usr/bin/env sh .sqa/script.tacky-burgundy-elephant.sh
+        container: qc.doc_hilly-firebrick-quetzal
   QC.Lic:
     repos:
       github.com/Parallel-in-Time/pySDC licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.grumpy-teal-bat.sh
-        container: qc.lic_homey-lemon-hare
+        - /usr/bin/env sh .sqa/script.hazy-bronze-capuchin.sh
+        container: qc.lic_tacky-pumpkin-scorpion
   QC.Met:
     repos:
       github.com/Parallel-in-Time/pySDC cff-converter-python:
         commands:
-        - /usr/bin/env sh .sqa/script.stuffy-xanthic-spider.sh
-        container: qc.met_bumpy-goldenrod-deer
+        - /usr/bin/env sh .sqa/script.scummy-fuchsia-tarantula.sh
+        container: qc.met_lovely-teal-impala
   QC.Sec:
     repos:
       github.com/Parallel-in-Time/pySDC bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.chewy-cream-cow.sh
-        container: qc.sec_flabby-corn-termite
+        - /usr/bin/env sh .sqa/script.gloppy-puce-zebra.sh
+        container: qc.sec_geeky-dandelion-oriole
   QC.Sty:
     repos:
       github.com/Parallel-in-Time/pySDC flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.fuzzy-magnolia-bloodhound.sh
-        container: qc.sty_wimpy-wisteria-crab
+        - /usr/bin/env sh .sqa/script.crappy-bronze-bat.sh
+        container: qc.sty_snoopy-emerald-cattle
       github.com/Parallel-in-Time/pySDC jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.sunny-teal-bloodhound.sh
-        container: qc.sty_shaggy-vermilion-yak
+        - /usr/bin/env sh .sqa/script.frumpy-magnolia-fly.sh
+        container: qc.sty_whiny-linen-dragon
   QC.Ver:
     repos:
       github.com/Parallel-in-Time/pySDC get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.foggy-purple-sheep.sh
-        container: qc.ver_chewy-aqua-ferret
+        - /usr/bin/env sh .sqa/script.blurry-thistle-insect.sh
+        container: qc.ver_shaggy-persimmon-buffalo
 timeout: 5400
